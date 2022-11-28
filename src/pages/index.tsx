@@ -6,6 +6,7 @@ import Image from "next/image";
 import { ImAirplane } from "react-icons/im";
 import { MdHotel, MdLocationPin, MdTour } from "react-icons/md";
 import { env } from "../env/server.mjs";
+import FlightSearch from "../components/FlightSearch";
 const BASE_URL = "https://api.unsplash.com";
 
 const Home: NextPage<{ src: string; location: string }> = (props) => {
@@ -43,41 +44,10 @@ const Home: NextPage<{ src: string; location: string }> = (props) => {
         <div className="text-mainBlue-1">Sign In</div>
       </nav>
       <main className="absolute flex min-h-screen w-full flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c]">
-        <div className="z-10 my-auto mx-2 flex flex-col rounded-sm bg-mainBlue-1 p-5 text-white">
-          <div className="-mt-2 flex justify-start">
-            <div className="inline-block pl-0 pr-2">Round-Trip</div>
-            <div className="inline-block px-2 text-mainBlue-2">One-Way</div>
-            <div className="inline-block px-2 text-mainBlue-2">Multi-City</div>
-          </div>
-          <div>
-            <form className="flex-start mt-4 flex text-black">
-              <input
-                type="text"
-                placeholder="From"
-                className="ml-0 mr-1 grow rounded-md p-2"
-              />
-              <input
-                type="text"
-                placeholder="To"
-                className="mx-1 grow rounded-md p-2"
-              />
-              <input
-                type="datetime-local"
-                className="mx-1 grow rounded-md p-2"
-              />
-              <input
-                type="text"
-                placeholder="Passengers, Class"
-                className="mx-1 grow  rounded-md p-2"
-              />
-              <input
-                type="submit"
-                value="Search"
-                className="mx-1 grow rounded-md bg-mainBlue-2 p-2 text-white"
-              />
-            </form>
-          </div>
+        <div className="relative z-10 mt-auto text-2xl text-white shadow-black drop-shadow-sm">
+          Faraway Lands Made Closer
         </div>
+        <FlightSearch />
         <Image
           className="z-0 object-cover"
           src={src}
