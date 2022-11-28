@@ -1,6 +1,6 @@
 const FlightSearch = () => {
   return (
-    <div className="z-10 mx-2 my-auto flex flex-col rounded-sm bg-mainBlue-1 p-5 text-white">
+    <div className="rounded-sm bg-mainBlue-1 p-5 text-white">
       <div className="-mt-2 flex justify-start">
         <div className="inline-block pl-0 pr-2">Round-Trip</div>
         <div className="inline-block px-2 text-mainBlue-2">One-Way</div>

@@ -3,10 +3,9 @@ import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 
-import { ImAirplane } from "react-icons/im";
-import { MdHotel, MdLocationPin, MdTour } from "react-icons/md";
 import { env } from "../env/server.mjs";
 import FlightSearch from "../components/FlightSearch";
+import Nav from "../components/Nav";
 const BASE_URL = "https://api.unsplash.com";
 
 const Home: NextPage<{ src: string; location: string }> = (props) => {
@@ -21,33 +20,16 @@ const Home: NextPage<{ src: string; location: string }> = (props) => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <nav className="fixed top-0 left-0 right-0 z-10 flex items-center justify-around bg-white backdrop-blur-sm">
-        <div>
-          <Image src="/logo.jpeg" alt="logo" width={108} height={36} />
-        </div>
-        <div>
-          <ul className="flex ">
-            <li className="flex cursor-pointer px-3">
-              <ImAirplane className="m-auto px-0.5" /> Flights
-            </li>
-            <li className="flex cursor-pointer px-3">
-              <MdHotel className="m-auto px-0.5" /> Hotels
-            </li>
-            <li className="flex cursor-pointer px-3">
-              <MdLocationPin className="m-auto px-0.5" /> Locations
-            </li>
-            <li className="flex cursor-pointer px-3">
-              <MdTour className="m-auto px-0.5" /> Tours
-            </li>
-          </ul>
-        </div>
-        <div className="text-mainBlue-1">Sign In</div>
-      </nav>
+      <div className="fixed top-0 left-0 right-0 z-10">
+        <Nav />
+      </div>
       <main className="absolute flex min-h-screen w-full flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c]">
         <div className="relative z-10 mt-auto text-2xl text-white shadow-black drop-shadow-sm">
           Faraway Lands Made Closer
         </div>
-        <FlightSearch />
+        <div className="z-10 mx-2 my-auto flex flex-col">
+          <FlightSearch />
+        </div>
         <Image
           className="z-0 object-cover"
           src={src}
