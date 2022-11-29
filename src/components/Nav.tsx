@@ -1,12 +1,12 @@
 import { ImAirplane } from "react-icons/im";
 import { MdHotel, MdLocationPin, MdTour } from "react-icons/md";
-import Image from "next/image";
 
 const Nav = () => {
   return (
-    <nav className="flex items-center justify-around bg-white backdrop-blur-sm">
-      <div>
-        <Image src="/logo.jpeg" alt="logo" width={108} height={36} />
+    <nav className="flex items-center justify-around bg-white bg-opacity-50 backdrop-blur-md">
+      <div className="cursor-pointer">
+        <span className="font-medium text-mainBlue-1">Flight</span>
+        <span className="font-medium text-green-500">Fetch</span>
       </div>
       <div>
         <ul className="flex ">
@@ -24,7 +24,7 @@ const Nav = () => {
           </li>
         </ul>
       </div>
-      <div className="text-mainBlue-1">Sign In</div>
+      <div className="cursor-pointer text-mainBlue-1">Sign In</div>
     </nav>
   );
 };

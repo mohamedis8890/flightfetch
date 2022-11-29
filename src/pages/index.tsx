@@ -24,7 +24,7 @@ const Home: NextPage<{ src: string; location: string }> = (props) => {
         <Nav />
       </div>
       <main className="absolute flex min-h-screen w-full flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c]">
-        <div className="relative z-10 mt-auto text-2xl text-white shadow-black drop-shadow-sm">
+        <div className="relative z-10 mt-auto animate-text bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-500 bg-clip-text text-5xl font-semibold text-transparent">
           Faraway Lands Made Closer
         </div>
         <div className="z-10 mx-2 my-auto flex flex-col">
