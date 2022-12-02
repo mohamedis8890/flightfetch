@@ -7,6 +7,7 @@
     background-color: theme("colors.white");
     border-radius: theme("borderRadius.lg");
     padding: theme("spacing.6");
-    box-shadow: theme("boxShadow.xl");
+    box-shadow: theme("boxShadow.md");
+    border: 1px solid theme("borderColor.slate.200");
   }
 }

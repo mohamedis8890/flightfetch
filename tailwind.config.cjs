@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        ropa: ["var(--font-ropa)"],
+      },
       colors: {
         mainBlue: {
           1: "#207abb",

@@ -23,8 +23,11 @@ const Home: NextPage<{ src: string; location: string }> = (props) => {
       <div className="fixed top-0 left-0 right-0 z-10">
         <Nav />
       </div>
-      <main className="absolute flex min-h-screen w-full flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c]">
-        <div className="relative z-10 mt-auto animate-text bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-500 bg-clip-text text-5xl font-semibold text-transparent">
+      <div className="absolute flex min-h-screen w-full flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c]">
+        <div
+          className="relative z-10 mt-auto animate-text bg-gradient-to-r 
+          from-indigo-500 via-purple-500 to-indigo-500 bg-clip-text text-5xl font-semibold text-transparent"
+        >
           Faraway Lands Made Closer
         </div>
         <div className="z-10 mx-2 my-auto flex flex-col">
@@ -41,7 +44,7 @@ const Home: NextPage<{ src: string; location: string }> = (props) => {
             {props.location}
           </span>
         </div>
-      </main>
+      </div>
     </>
   );
 };

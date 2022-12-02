@@ -5,8 +5,8 @@ const Nav = () => {
   return (
     <nav className="flex items-center justify-around bg-white bg-opacity-50 backdrop-blur-md">
       <div className="cursor-pointer">
-        <span className="font-medium text-mainBlue-1">Flight</span>
-        <span className="font-medium text-green-500">Fetch</span>
+        <span className={`font-ropa text-xl text-mainBlue-1`}>Flight</span>
+        <span className="font-ropa text-xl text-green-600">Fetch</span>
       </div>
       <div>
         <ul className="flex ">
