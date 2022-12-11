@@ -1,4 +1,4 @@
-import { type GetStaticProps, type NextPage } from "next";
+import { type GetServerSideProps, type NextPage } from "next";
 import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
@@ -51,7 +51,7 @@ const Home: NextPage<{ src: string; location: string }> = (props) => {
 
 export default Home;
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   const response = await fetch(
     `${BASE_URL}/photos/random?` +
       new URLSearchParams({
